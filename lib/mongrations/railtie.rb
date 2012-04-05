@@ -1,5 +1,5 @@
 require 'rails'
-require File.join(File.dirname(__FILE__), '..', 'mongrations')
+require 'mongrations'
 
 module Mongrations
   class Railtie < Rails::Railtie

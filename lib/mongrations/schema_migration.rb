@@ -1,4 +1,4 @@
-module MongoMapper
+module Mongrations
   class SchemaMigration
     include MongoMapper::Document
 

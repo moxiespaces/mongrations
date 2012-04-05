@@ -1,4 +1,4 @@
-module MongoMapper
+module Mongrations
   class Mongration
     @@verbose = true
     cattr_accessor :verbose
