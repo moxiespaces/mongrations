@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mongrations}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["jonbell"]
@@ -34,7 +34,6 @@ necessary}
      "lib/mongrations/mongration.rb",
      "lib/mongrations/railtie.rb",
      "lib/mongrations/schema_migration.rb",
-     "lib/tasks/mongo.rake",
      "mongrations.gemspec",
      "tasks/mongo.rake",
      "test/mongrations_test.rb",
