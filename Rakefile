@@ -1,23 +1,23 @@
+require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
-desc 'Default: run unit tests.'
-task :default => :test
-
-desc 'Test the mongrations plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
-end
-
-desc 'Generate documentation for the mongrations plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'Mongrations'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "mongrations"
+    gem.summary = %Q{Data migrating for MongoMapper}
+    gem.description = %Q{Mongrations aims to be similar to ActiveRecord's data migrations, except
+instead of worrying about schema changes, offering a way to change data when
+necessary}
+    gem.email = "jonbell@spamcop.net"
+    gem.homepage = "http://github.com/jonbell/mongrations"
+    gem.authors = ["jonbell"]
+    gem.add_dependency "mongo_mapper", ">= 0.11.0"
+    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end

@@ -33,7 +33,7 @@ Dependencies
 
 You need Mongo and MongoMapper for this to be of any use.
 
-Also, this has only been tested on Rails 2.3.5. 
+Also, this has only been tested on Rails 3.2.3.
 
 Disclaimer
 ==========
